@@ -1,0 +1,15 @@
+.new::before{
+    content: "новій текст";
+    color: aqua;
+    font-family: cursive;
+}
+ul{
+    list-style-type: none;
+}
+li::before{
+    content: "♣";
+}
+p::first-letter{
+    font-size: 3em;
+    color:firebrick;
+}
