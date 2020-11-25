@@ -1,0 +1,12 @@
+body {
+  background-image: url(unnamed.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 50px
+}
+ul{
+  list-style-type: none;
+}
+li::before{
+  content: "☆"
+}
