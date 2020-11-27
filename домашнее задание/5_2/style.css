@@ -2,7 +2,8 @@ body {
   background-image: url(unnamed.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  font-size: 50px
+  font-size: 50px;
+    text-decoration: none;
 }
 ul{
   list-style-type: none;
