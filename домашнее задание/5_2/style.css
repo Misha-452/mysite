@@ -10,7 +10,12 @@ ul{
 li::before{
   content: "☆"
 }
+a{
+ text-decoration: none;
+}
+
 @media(max-width:1000px)
   #d{
   text-align: center;
+    text-decoration: overline;
 }
