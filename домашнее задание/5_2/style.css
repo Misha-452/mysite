@@ -10,3 +10,7 @@ ul{
 li::before{
   content: "☆"
 }
+@media(max-width:1000px)
+  #d{
+  text-align: center;
+}
