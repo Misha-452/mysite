@@ -5,18 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Детские сказки</title>
     <link rel="stylesheet" href="style3.css">
-    <script>
-        document.querySelector(".btn") .addEventListener("click", change);
-        const lights = document.querySelectorAll('body');
-        counter = -1;
-
-        function change(){
-            const colors = ['darkgoldenrod', 'gold'];
-            const lightsLen = colors.length;
-            counter = (counter+1) % lightsLen;
-        document.body.style.backgroundColor = colors[counter];
- }
-    </script>
 </head>
 <body>
     <button class="btn">Изменить цвет страницы</button>
@@ -28,5 +16,16 @@
     <a href="https://deti-online.com/skazki/skazki-aksakova/alenkii-cvetochek/" >Продолжение сказки</a>
     <a href="Цс.html">Другая сказка</a>
     <a href="index.html">Главная страница</a>
+    <script> document.querySelector(".btn") .addEventListener("click", change);
+        const lights = document.querySelectorAll('body');
+        counter = -1;
+
+        function change(){
+            const colors = ['darkgoldenrod', 'gold'];
+            const lightsLen = colors.length;
+            counter = (counter+1) % lightsLen;
+        document.body.style.backgroundColor = colors[counter];
+ }
+    </script>
 </body>
 </html>
