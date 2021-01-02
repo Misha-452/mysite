@@ -9,14 +9,14 @@
 <body>
     <script>
         document.querySelector(".btn") .addEventListener("click", change);
- const lights = document.querySelectorAll('body');
- counter = -1;
+        const lights = document.querySelectorAll('body');
+        counter = -1;
 
- function change(){
-     const colors = ['darkgoldenrod', 'gold'];
-     const lightsLen = colors.length;
-     counter = (counter+1) % lightsLen;
-     document.body.style.backgroundColor = colors[counter];
+        function change(){
+            const colors = ['darkgoldenrod', 'gold'];
+            const lightsLen = colors.length;
+            counter = (counter+1) % lightsLen;
+        document.body.style.backgroundColor = colors[counter];
  }
     </script>
     <button class="btn">Изменить цвет страницы</button>
