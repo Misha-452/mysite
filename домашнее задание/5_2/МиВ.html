@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style4.css">
 </head>
 <body>
+    <button class="btn">Изиенить </button>
     <h1 align="center">Сказка"Маша и Медведь"</h1>
     <div class="d">
     <img src="МиВ.jpg" title="Сказка'Маша и Медведь'">
@@ -25,5 +26,16 @@
     <a href="https://deti-online.com/skazki/russkie-narodnye-skazki/masha-i-medved/" >продолжение сказки</a>
     <a href="Al.html">Другая сказка</a>
     <a href="index.html">Главная страница</a>
+        <script>
+        document.querySelector(".btn") .addEventListener("click", change);
+ const lights = document.querySelectorAll('body');
+ counter = -1;
+
+ function change(){
+     const colors = ["blue", "cyan", "deepskyblue"];
+     const lightsLen = colors.length;
+     counter = (counter+1) % lightsLen;
+     document.body.style.backgroundColor = colors[counter];
+}</script>
 </body>
 </html>
