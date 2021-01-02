@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="style3.css">
 </head>
 <body>
+    <script>
+        document.querySelector(".btn") .addEventListener("click", change);
+ const lights = document.querySelectorAll('body');
+ counter = -1;
+
+ function change(){
+     const colors = ['darkgoldenrod', 'gold'];
+     const lightsLen = colors.length;
+     counter = (counter+1) % lightsLen;
+     document.body.style.backgroundColor = colors[counter];
+ }
+    </script>
     <button class>Изменить цвет страницы</button>
     <h1 align="center">Сказка"Аленький цветочек"</h1>
     <img src="Al.jpg" title="Сказка'Аленький цветочек'" width="300" height="300">
