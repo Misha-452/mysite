@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
+    <button>Изменить цвет страницы</button>
     <h1 align="center">Сказка"Цветик-семицветк"</h1>
     <div class="f">
     <img src="Цс.jpg" title="Сказка'Цветик-семицветк'">
@@ -17,5 +18,16 @@
     <a href="https://deti-online.com/skazki/sbornik-skazok/cvetik-semicvetik/" >продолжение сказки</a>
     <a href="МиВ.html">Другая сказка</a>
     <a href="index.html">Главная страница</a>
+    <script>
+        document.querySelector(".btn") .addEventListener("click", change);
+ const lights = document.querySelectorAll('body');
+ counter = -1;
+
+ function change(){
+     const colors = ["darkgoldenrod", "gold", "orange"];
+     const lightsLen = colors.length;
+     counter = (counter+1) % lightsLen;
+     document.body.style.backgroundColor = colors[counter];
+}</script>
 </body>
 </html>
