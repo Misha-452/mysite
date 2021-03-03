@@ -1,0 +1,16 @@
+figure, .infobox {
+      position: absolute;
+   }
+
+   .infobox {
+    background: #6a7ad18f; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    left: 10px; top: 10px; /* Положение даты */
+    padding: 5px 10px; /* Поля вокруг текста */
+    min-width: 40px; /* Минимальная ширина */
+    border: 2px solid rgb(50, 65, 131); /* Параметры рамки */
+    text-align: center;
+   }
+   .date {
+    font-size: 25px; /* Размер шрифта */
+   }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 id="heading">Найди клад!</h1>
+        <img id="map" width="400" height="400" src="./img/map.webp" />
+        <p id="distance"></p>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+            // Получить случайное число
+            let getRandomNum = function (size) {
+                return Math.floor(Math.random() * size);
+            };
+            // Вычислить расстояние от клика (event) до клада (target)
+            let getDistance = function (event, target) {
+                let diffX = event.offsetX - target.x;
+                let diffY = event.offsetY - target.y;
+                return Math.sqrt((diffX * diffX) + (diffY * diffY));
+            };
+
+            let getDistanceMsg = function(distance){
+                if (distance < 10) {
+                    return "Вы очень рядом";
+                }else if (distance < 20){
+                    return "ВЫ почти рядом"
+            } else if (distance < 100) {
+                    return "Ну почти"
+            } else if (distance < 180) {
+                    return "Далековато"
+            } else if (distance < 320) {
+                    return "ВЫ очень далеко"
+            }else {
+                    return "Северный полюс"
+            }
+        }
+            // Создаем переменные
+            let width = 400;
+            let height = 400;
+            let clicks = 0;
+            // Случайная позиция клада
+            let target = {
+                x: getRandomNum(width),
+                y: getRandomNum(height),
+            };
+            // Добавляем элементу img обработчик клика
+            $("#map").click(function (event) {
+                clicks++;
+                let distance = getDistance(event, target);
+                let distanceMsg = getDistanceMsg(distance);
+                $('#distance').text(distanceMsg);
+                if (distance < 8){
+                    alert("Вы победили! Сделано кликов;" + clicks)
+                }
+            });
+        </script>
+        <a href="index_js.html">Главная страница</a>
+    </body>
+</html>
