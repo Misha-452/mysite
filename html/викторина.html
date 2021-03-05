@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert("Приветствую на викторине на тему 'География'. Желаю удачи!")
+        let scores = 0;
+
+            let firstQ = prompt("Сколько сторон горизонта существует?: a) 3 b) 1 c) 4 ");
+            if (firstQ == "c") {
+                scores += 2; // scores = scores +2
+            }
+
+            let secondQ = prompt("Столица города Литва: a)Мадрид  b) Вильнюс c) Прага");
+            if (secondQ == "b") {
+                scores += 2;
+            }
+
+            let thirdQ = prompt("Какое из озёр, омывающих территорию Казахстана, самое большое?: a) Тенгиз b) Каспийское море c) Аральское море");
+            if (thirdQ == "b") {
+                scores += 2;
+            }
+             let fourthQ = prompt("Где находится город Ялта?: a) Крым b) Кавказ c) Татарстан ");
+                if (fourthQ == "a") {
+                    scores += 2; // scores = scores +2
+                }
+             let fifthQ = prompt("Как называется самое большое высокогорное озеро в мире?: a) Папатити b) Титикака  c) Миссисипи ");
+                    if (fifthQ == "b") {
+                        scores += 2; // scores = scores +2
+                    }
+            let sixthQ = prompt("В какой части света находится пустыня Сахара?: a) Урал b) Волга  c) Кама");
+                    if (sixthQ == "c") {
+                        scores += 2; // scores = scores +2
+                    }
+            let seventhQ = prompt("С какой страной граничит Дания?: a) Гермаей b) Таиландом  c) Чили");
+                    if (seventhQ == "a") {
+                            scores += 2; // scores = scores +2
+                    }
+             let eighthQ = prompt("Как называется географическая карта без обозначения названий? a) Слепая b) Глухая  c) Немая");
+                    if (eighthQ == "c") {
+                    scores += 2; // scores = scores +2
+                    }
+
+            alert(`${scores} - результат!`);
+    </script>
+        <a href="index_js.html">Главная страница</a>
+</body>
+</html>
