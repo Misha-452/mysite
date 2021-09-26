@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Tooltip - Default functionality</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( document ).tooltip();
+    $( "#name" ).tooltip({
+        content: "<strong>Enter text!</strong>",
+        track: true
+    });
+    $( "#name2" ).tooltip({
+        content: "<strong>Enter text!</strong>",
+        disabled: true
+    });
+  } );
+  </script>
+  <style>
+  label {
+    display: inline-block;
+    width: 5em;
+  }
+  </style>
+
+  <script>
+  $( function() {
+    var spinner = $( "#spinner" ).spinner();
+ 
+    $( "#disable" ).on( "click", function() {
+      if ( spinner.spinner( "option", "disabled" ) ) {
+        spinner.spinner( "enable" );
+      } else {
+        spinner.spinner( "disable" );
+      }
+    });
+    $( "#destroy" ).on( "click", function() {
+      if ( spinner.spinner( "instance" ) ) {
+        spinner.spinner( "destroy" );
+      } else {
+        spinner.spinner();
+      }
+    });
+    $( "#getvalue" ).on( "click", function() {
+      alert( spinner.spinner( "value" ) );
+    });
+    $( "#setvalue" ).on( "click", function() {
+      spinner.spinner( "value", 5 );
+    });
+ 
+    $( "button" ).button();
+  } );
+  </script>
+   <script>
+    $( function() {
+      $( "#slider" ).slider({
+          animate:"slow",
+          range:"true",
+          max: 10,
+          values:["0"],
+          slide: function(event, ui){
+              $("#result").text(ui.values[0]);
+          }
+      });
+      $("#result").text($("#slider").slider("values", 0));
+    } );
+     $(function () {
+        $("#slider1").slider({
+          animate: "slow",
+          range: "true",
+          max: 10,
+          values: ["0"],
+          slide: function (event, ui) {
+            $("#result1").text(ui.values[0]);
+          }
+        });
+        $("#result1").text($("#slider1").slider("values", 0));
+      });
+        $(function () {
+          $("#slider2").slider({
+            animate: "slow",
+            range: "true",
+             max: 10,
+            values: ["0"],
+            slide: function (event, ui) {
+              $("#result2").text(ui.values[0]);
+            }
+          });
+          $("#result2").text($("#slider2").slider("values", 0));
+      });
+      $(function () {
+          $("#slider3").slider({
+            animate: "slow",
+            range: "true",
+            max: 10,
+            values: ["0"],
+            slide: function (event, ui) {
+              $("#result3").text(ui.values[0]);
+            }
+          });
+          $("#result3").text($("#slider3").slider("values", 0));
+        });
+       $(function () {
+          $("#slider4").slider({
+            animate: "slow",
+            range: "true",
+            max: 10,
+            values: ["0"],
+            slide: function (event, ui) {
+              $("#result4").text(ui.values[0]);
+            }
+          });
+          $("#result4").text($("#slider4").slider("values", 0));
+        });
+    </script>
+
+</head>
+<body>
+ <!--
+<p><a href="#" title="That&apos;s what this widget is">Tooltips</a> can be attached to any element. When you hover
+the element with your mouse, the title attribute is displayed in a little box next to the element, just like a native tooltip.</p>
+<p>But as it&apos;s not a native tooltip, it can be styled. Any themes built with
+<a href="http://jqueryui.com/themeroller/" title="ThemeRoller: jQuery UI&apos;s theme builder application">ThemeRoller</a>
+will also style tooltips accordingly.</p>
+<p>Tooltips are also useful for form elements, to show some additional information in the context of each field.</p>
+<p><label for="age">Your age:</label><input id="age" title="We ask for your age only for statistical purposes."></p>
+<p>Hover the field to see the tooltip.</p>
+ <label for="name"> Enter: </label>
+ <input type="text" title="tooltip" id="name">
+<br>
+ <label for="name2"> Enter: </label>
+ <input type="text" title="tooltip" id="name2">
+ <br>
+ <p>
+    <label for="spinner">Select a value:</label>
+    <input id="spinner" name="value">
+  </p>
+   
+  <p>
+    <button id="disable">Toggle disable/enable</button>
+    <button id="destroy">Toggle widget</button>
+  </p>
+   
+  <p>
+    <button id="getvalue">Get value</button>
+    <button id="setvalue">Set value to 5</button>
+  </p>
+   <br>
+   <div id="slider"></div>
+   <b>Result: <span id="result" style="color: green"></span></b>-->
+   <table border="1" class="film1">
+       <tr>
+           <th>
+               Фильм
+           </th>
+       </tr>
+       <tr>
+           <td>
+               <img width="" src="https://www.film.ru/sites/default/files/styles/thumb_260x400/public/movies/posters/29091352-1522805.jpg" alt="">
+           </td>
+       </tr>
+       <tr>
+           <td>
+            «Круиз по джунглям» (англ. Jungle Cruise) — американский приключенческий фильм Жауме Кольет-Серры,
+             основанный на одноименном аттракционе Диснейленда.
+              В главной роли Дуэйн Джонсон и Эмили Блант.
+           </td>
+       </tr>
+       <tr>
+           <td>
+            <div id="slider">
+            <b style="color: rgb(230, 130, 17)">Оценка: <span id="result" style="color: rgb(230, 130, 17)"></span></b></div>
+           </td>
+       </tr>
+       <br>
+   </table>
+      <table border="1" class="film2">
+        <tr>
+          <th>
+            Фильм
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <img width="250"
+              src="https://thumbs.dfs.ivi.ru/storage5/contents/9/e/afef00f071174caaa41933f332524f.jpg"
+              alt="">
+          </td>
+        </tr>
+        <tr>
+          <td>
+          «Мортал Комбат» (англ. Mortal Kombat) — американский фильм, являющийся режиссёрским и продюсерским дебютом Саймона
+          Маккуойда в кино. Фильм основан на одноимённой серии игр, а также является перезапуском киносерии (англ.)русск., начатой
+          в 1995 году с ленты «Смертельная битва».
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div id="slider1">
+              <b style="color: rgb(184, 230, 17)">Оценка: <span id="result1" style="color: rgb(184, 230, 17)"></span></b>
+            </div>
+          </td>
+        </tr>
+      </table>
+        <table border="1" class="film1">
+          <tr>
+            <th>
+              Фильм
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <img width=""
+                src="https://b1.filmpro.ru/c/825516.224x316.jpg"
+                alt="">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              «Космический джем: Новое поколение» (англ. Space Jam: A New Legacy) — американский анимационно-игровой спортивный фильм
+              режиссёра Малкольма Д. Ли. Фильм является продолжением фильма «Космический джем», в главной роли в нём снялся Леброн
+              Джеймс. В фильме появились такие персонажи «Looney Tunes», как Багз Банни, Даффи Дак, Твити, Марсианин Марвин. Мировая
+              премьера фильма состоялась 14 июля 2021 года.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div id="slider2">
+                <b style="color: rgb(17, 230, 124)">Оценка: <span id="result2" style="color: rgb(17, 230, 124)"></span></b>
+              </div>
+            </td>
+          </tr>
+        </table>
+          <table border="1" class="film1">
+            <tr>
+              <th>
+                Фильм
+              </th>
+            </tr>
+            <tr>
+              <td>
+                <img width=""
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1TINlzFkde8xNPxfbyvSCsaR_AdaNHtwa8Q&usqp=CAU"
+                  alt="">
+              </td>
+            </tr>
+            <tr>
+              <td>
+              «Кто я» (нем. Who Am I – Kein System ist sicher, буквально — «Кто я — ни одна система не безопасна») — немецкий
+              фильм-триллер режиссёра Барана бо Одара, вышедший на экраны в 2014 году и повествующий о берлинской группе хакеров,
+              стремящейся к всемирной славе. Фильм был снят в Берлине и Ростоке. Впервые картина была показана в разделе
+              современной мировой кинематографии на Международном кинофестивале в Торонто 2014 года. Российская и казахстанская
+              премьера состоялись 13 августа 2015 года.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div id="slider3">
+                  <b style="color: rgb(17, 223, 230)">Оценка: <span id="result3" style="color: rgb(17, 223, 230)"></span></b>
+                </div>
+              </td>
+            </tr>
+          </table>
+            <table border="1" class="film1">
+              <tr>
+                <th>
+                  Фильм
+                </th>
+              </tr>
+              <tr>
+                <td>
+                  <img width=""
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaIlcYkV0lNfG6jKzivXkz3EPhIA4uuQjUEw&usqp=CAU"
+                    alt="">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                «Мулан» (англ. Mulan) — американский драматический фильм 2020 года, который является киноадаптацией одноименного
+                мультфильма 1998 года, основанного на китайской легенде о Хуа Мулань. Режиссёром картины выступила Ники Каро, а сценарий
+                написали Рик Джаффа, Аманда Сильвер, Лорен Хинек и Элизабет Мартин. Заглавную роль исполнила Лю Ифэй; в остальных ролях
+                снялись Донни Йен, Джейсон Скотт Ли, Йосон Ан, Гун Ли и Джет Ли.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div id="slider4">
+                    <b style="color: rgb(92, 17, 230)">Оценка: <span id="result4" style="color: rgb(92, 17, 230)"></span></b>
+                  </div>
+                </td>
+              </tr>
+            </table>
+</body>
+</html>
