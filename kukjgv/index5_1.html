@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Controlgroup - Default Functionality</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js">
+
+  <style>
+    .ui-controlgroup-vertical {
+      width: 150px;
+    }
+    .ui-controlgroup.ui-controlgroup-vertical > button.ui-button,
+    .ui-controlgroup.ui-controlgroup-vertical > .ui-controlgroup-label {
+      text-align: center;
+    }
+    #car-type-button {
+      width: 120px;
+    }
+    .ui-controlgroup-horizontal .ui-spinner-input {
+      width: 20px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $("#dialog").dialog({
+        title: 'Заголовок 1',
+        resizable: false,
+        position: ['left', 'top'],
+    });
+    
+    
+  } );
+  </script>
+  <script>
+    
+      $(function(){
+          $("#d1, #d2, #d3").dialog({
+              autoOpen: false,
+              position: ["right", "top"]
+          }).filter('#d2').dialog('option', 'position', ['right', 'bottom']).filter('#d3').dialog('option', 'position', ['right', 'bottom'])
+
+          $('#btn1, #btn2, #btn3').button().click(function(e){
+          var target = this.id == "btn1" ? "#d1" : "#d2";
+          if ($(target).dialog("isOpen")) {
+              $(target).dialog("close")
+          } else {
+              $(target).dialog("open")
+          }
+          })
+       });
+  </script>
+  </head>
+  <body>
+      <div id="d1" title="Samsung" class="ui-widget">
+        Samsung Group («Самсунг Груп», кор. 삼성그룹, Samseong Gurub, Samsŏng Gurup) — южнокорейская группа компаний, один из крупнейших чеболей, основанный в 1938 году. На мировом рынке известен как производитель высокотехнологичных компонентов, включая полноцикловое производство интегральных микросхем, телекоммуникационного оборудования, бытовой техники, аудио- и видеоустройств. Главный офис компании расположен в Сеуле.
+      </div>
+      <div id="d2" title="Asus class="ui-widget">
+        AsusTek Computer Inc. (кит. 華碩電腦股份有限公司 Huáshuò Diànnǎo Gǔfèn Yǒuxiàn Gōngsī; кратко — ASUS (/eɪˈsuːs/[2] или /ɑːˈsuːs/[3] или /æˈsuːs/[4]) — расположенная на Тайване транснациональная компания, специализирующаяся на компьютерной электронике (как комплектующие, так и готовые продукты).
+
+        Название торговой марки Asus происходит от слова Pegasus («Пегас»)[2][5].
+        
+        Котировки ценных бумаг: NASDAQ: AKCPF.
+      </div>
+      <div id="d3" title="HP" class="ui-widget">
+        ewlett-Packard (HP, Хью́летт-Па́ккард) — созданная в 1939 году компания — поставщик аппаратного и программного обеспечения для организаций и индивидуальных потребителей. Штаб-квартира — в Пало-Альто (Калифорния). Одна из крупнейших американских компаний в сфере информационных технологий.
+      </div>
+      <img height="280" width="300" id="btn1" src="https://assets.turbologo.ru/blog/ru/2019/11/18163352/samsung-logo-1993.jpg" alt="">
+      <img width="300" id="btn2" src="images.png" alt="">
+      <img width="300" id="btn2" src="1200px-HP_New_Logo_2D.png" alt="">
+ </body>
+ </html>  
