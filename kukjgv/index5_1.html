@@ -39,12 +39,12 @@
   <script>
     
       $(function(){
-          $("#d1, #d2, #d3").dialog({
+          $("#d1, #d2").dialog({
               autoOpen: false,
               position: ["right", "top"]
           }).filter('#d2').dialog('option', 'position', ['right', 'bottom']).filter('#d3').dialog('option', 'position', ['right', 'bottom'])
 
-          $('#btn1, #btn2, #btn3').button().click(function(e){
+          $('#btn1').button().click(function(e){
           var target = this.id == "btn1" ? "#d1" : "#d2";
           if ($(target).dialog("isOpen")) {
               $(target).dialog("close")
@@ -53,9 +53,89 @@
           }
           })
        });
+  
   </script>
+   <script>
+    $( function() {
+      $( "#slider" ).slider({
+          min: 1,
+          max: 10,
+          animate:"slow",
+          range:"true",
+          value:1,
+          slide: function(event, ui){
+              $("#result").text(ui.value);
+          }
+      });
+      $("#result").text($("#slider").slider("value"));
+    } );
+
+    $( function() {
+      $( "#slider1" ).slider({
+          min: 1,
+          max: 10,
+          animate:"slow",
+          range:"true",
+          value: 1,
+          slide: function (event, ui) {
+            $("#result1").text(ui.value);
+          }
+      });
+      $("#result1").text($("#slider1").slider("value"));
+    } );
+
+    $( function() {
+      $( "#slider2" ).slider({
+          min: 1,
+          max: 10,
+          animate:"slow",
+          range:"true",
+          value:1,
+          slide: function(event, ui){
+              $("#result2").text(ui.value);
+          }
+      });
+      $("#result2").text($("#slider2").slider("value"));
+    } );
+    
+    </script>
+  <script>
+         $(function(){
+          $("#d2, #d3").dialog({
+              autoOpen: false,
+              position: ["right", "top"]
+          })
+
+          $('#btn2, #btn3').button().click(function(e){
+          var target = this.id == "btn3" ? "#d3" : "#d2";
+          if ($(target).dialog("isOpen")) {
+              $(target).dialog("close")
+          } else {
+              $(target).dialog("open")
+          }
+          })
+       });
+  </script>
+  <style>
+    .q{
+      display: flexbox;
+      flex-direction: row;
+      align-self: center;
+    }
+    .w{
+      display: flexbox;
+      flex-direction: row;
+      align-self: center;
+    }
+    .e{
+      display: flexbox;
+      flex-direction: row;
+      align-self: center;
+    }
+  </style>
   </head>
   <body>
+    
       <div id="d1" title="Samsung" class="ui-widget">
         Samsung Group («Самсунг Груп», кор. 삼성그룹, Samseong Gurub, Samsŏng Gurup) — южнокорейская группа компаний, один из крупнейших чеболей, основанный в 1938 году. На мировом рынке известен как производитель высокотехнологичных компонентов, включая полноцикловое производство интегральных микросхем, телекоммуникационного оборудования, бытовой техники, аудио- и видеоустройств. Главный офис компании расположен в Сеуле.
       </div>
@@ -69,8 +149,28 @@
       <div id="d3" title="HP" class="ui-widget">
         ewlett-Packard (HP, Хью́летт-Па́ккард) — созданная в 1939 году компания — поставщик аппаратного и программного обеспечения для организаций и индивидуальных потребителей. Штаб-квартира — в Пало-Альто (Калифорния). Одна из крупнейших американских компаний в сфере информационных технологий.
       </div>
+    <div class="w"> 
       <img height="280" width="300" id="btn1" src="https://assets.turbologo.ru/blog/ru/2019/11/18163352/samsung-logo-1993.jpg" alt="">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/OTz6n_caNKI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+      <div id="slider"></div>
+      <b style="color: rgb(230, 130, 17)">Оценка: <span id="result" style="color: rgb(230, 130, 17)"></span></b>
+      <br>
+    <div class="e">
       <img width="300" id="btn2" src="images.png" alt="">
-      <img width="300" id="btn2" src="1200px-HP_New_Logo_2D.png" alt="">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/lvL95bGw4pw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+      <div id="slider1"></div>
+      <b style="color: rgb(230, 130, 17)">Оценка: <span id="result1" style="color: rgb(230, 130, 17)"></span></b>
+      <br>
+    <div class="q">
+      <img width="300" id="btn3" src="1200px-HP_New_Logo_2D.png" alt="">
+      <br>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ihtgq1QmO-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+      <div id="slider2"></div>
+      <b style="color: rgb(230, 130, 17)">Оценка: <span id="result2" style="color: rgb(230, 130, 17)"></span></b>
+      <br>
+     
  </body>
  </html>  
