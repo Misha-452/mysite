@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>jQuery UI Controlgroup - Default Functionality</title>
@@ -12,13 +13,16 @@
     .ui-controlgroup-vertical {
       width: 150px;
     }
-    .ui-controlgroup.ui-controlgroup-vertical > button.ui-button,
-    .ui-controlgroup.ui-controlgroup-vertical > .ui-controlgroup-label {
+
+    .ui-controlgroup.ui-controlgroup-vertical>button.ui-button,
+    .ui-controlgroup.ui-controlgroup-vertical>.ui-controlgroup-label {
       text-align: center;
     }
+
     #car-type-button {
       width: 120px;
     }
+
     .ui-controlgroup-horizontal .ui-spinner-input {
       width: 20px;
     }
@@ -26,151 +30,262 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
-  $( function() {
-    $("#dialog").dialog({
+    $(function () {
+      $("#dialog").dialog({
         title: 'Заголовок 1',
         resizable: false,
         position: ['left', 'top'],
+      });
+
+
     });
-    
-    
-  } );
   </script>
   <script>
-    
-      $(function(){
-          $("#d1, #d2").dialog({
-              autoOpen: false,
-              position: ["right", "top"]
-          }).filter('#d2').dialog('option', 'position', ['right', 'bottom']).filter('#d3').dialog('option', 'position', ['right', 'bottom'])
 
-          $('#btn1').button().click(function(e){
-          var target = this.id == "btn1" ? "#d1" : "#d2";
-          if ($(target).dialog("isOpen")) {
-              $(target).dialog("close")
-          } else {
-              $(target).dialog("open")
-          }
-          })
-       });
-  
+    $(function () {
+      $("#d1, #d2").dialog({
+        autoOpen: false,
+        position: ["right", "top"]
+      }).filter('#d2').dialog('option', 'position', ['right', 'bottom']).filter('#d3').dialog('option', 'position', ['right', 'bottom'])
+
+      $('#btn1').button().click(function (e) {
+        var target = this.id == "btn1" ? "#d1" : "#d2";
+        if ($(target).dialog("isOpen")) {
+          $(target).dialog("close")
+        } else {
+          $(target).dialog("open")
+        }
+      })
+    });
+
   </script>
-   <script>
-    $( function() {
-      $( "#slider" ).slider({
-          min: 1,
-          max: 10,
-          animate:"slow",
-          range:"true",
-          value:1,
-          slide: function(event, ui){
-              $("#result").text(ui.value);
-          }
+  <script>
+    $(function () {
+      $("#slider").slider({
+        min: 1,
+        max: 10,
+        animate: "slow",
+        range: "true",
+        value: 1,
+        slide: function (event, ui) {
+          $("#result").text(ui.value);
+        }
       });
       $("#result").text($("#slider").slider("value"));
-    } );
+    });
 
-    $( function() {
-      $( "#slider1" ).slider({
-          min: 1,
-          max: 10,
-          animate:"slow",
-          range:"true",
-          value: 1,
-          slide: function (event, ui) {
-            $("#result1").text(ui.value);
-          }
+    $(function () {
+      $("#slider1").slider({
+        min: 1,
+        max: 10,
+        animate: "slow",
+        range: "true",
+        value: 1,
+        slide: function (event, ui) {
+          $("#result1").text(ui.value);
+        }
       });
       $("#result1").text($("#slider1").slider("value"));
-    } );
+    });
 
-    $( function() {
-      $( "#slider2" ).slider({
-          min: 1,
-          max: 10,
-          animate:"slow",
-          range:"true",
-          value:1,
-          slide: function(event, ui){
-              $("#result2").text(ui.value);
-          }
+    $(function () {
+      $("#slider2").slider({
+        min: 1,
+        max: 10,
+        animate: "slow",
+        range: "true",
+        value: 1,
+        slide: function (event, ui) {
+          $("#result2").text(ui.value);
+        }
       });
       $("#result2").text($("#slider2").slider("value"));
-    } );
-    
-    </script>
-  <script>
-         $(function(){
-          $("#d2, #d3").dialog({
-              autoOpen: false,
-              position: ["right", "top"]
-          })
+    });
 
-          $('#btn2, #btn3').button().click(function(e){
-          var target = this.id == "btn3" ? "#d3" : "#d2";
-          if ($(target).dialog("isOpen")) {
-              $(target).dialog("close")
-          } else {
-              $(target).dialog("open")
-          }
-          })
-       });
+  </script>
+  <script>
+    $(function () {
+      $("#d2, #d3").dialog({
+        autoOpen: false,
+        position: ["right", "top"]
+      })
+
+      $('#btn2, #btn3').button().click(function (e) {
+        var target = this.id == "btn3" ? "#d3" : "#d2";
+        if ($(target).dialog("isOpen")) {
+          $(target).dialog("close")
+        } else {
+          $(target).dialog("open")
+        }
+      })
+    });
   </script>
   <style>
-    .q{
-      display: flexbox;
-      flex-direction: row;
-      align-self: center;
-    }
-    .w{
-      display: flexbox;
-      flex-direction: row;
-      align-self: center;
-    }
-    .e{
-      display: flexbox;
-      flex-direction: row;
-      align-self: center;
-    }
-  </style>
-  </head>
-  <body>
-    
-      <div id="d1" title="Samsung" class="ui-widget">
-        Samsung Group («Самсунг Груп», кор. 삼성그룹, Samseong Gurub, Samsŏng Gurup) — южнокорейская группа компаний, один из крупнейших чеболей, основанный в 1938 году. На мировом рынке известен как производитель высокотехнологичных компонентов, включая полноцикловое производство интегральных микросхем, телекоммуникационного оборудования, бытовой техники, аудио- и видеоустройств. Главный офис компании расположен в Сеуле.
-      </div>
-      <div id="d2" title="Asus class="ui-widget">
-        AsusTek Computer Inc. (кит. 華碩電腦股份有限公司 Huáshuò Diànnǎo Gǔfèn Yǒuxiàn Gōngsī; кратко — ASUS (/eɪˈsuːs/[2] или /ɑːˈsuːs/[3] или /æˈsuːs/[4]) — расположенная на Тайване транснациональная компания, специализирующаяся на компьютерной электронике (как комплектующие, так и готовые продукты).
+    .q {
+        display: flex;
+        flex-direction: row;
 
-        Название торговой марки Asus происходит от слова Pegasus («Пегас»)[2][5].
+    }
+
+    .w {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .e {
+        display: flex;
+        flex-direction: row;
+    }
+    .sam{
+      display: flex;
+      justify-content: space-between;
+      padding: 1em;
+      box-sizing: border-box;
+    }
+    .as{
+      display: flex;
+      justify-content: space-between;
+      padding: 1em;
+      box-sizing: border-box;
+    }
+    .hp{
+      display: flex;
+      justify-content: space-between;
+      padding: 1em;
+      box-sizing: border-box;
+    }
+     #drag1 { width: 150px; height: 150px; padding: 0.5em; }
+     #drag2 { width: 150px; height: 150px; padding: 0.5em; }
+     #drag3 { width: 150px; height: 150px; padding: 0.5em; }
+     #drop1 { width: 150px; height: 150px; padding: 0.5em; }
+     #drop2 { width: 150px; height: 150px; padding: 0.5em; }
+     #drop3 { width: 150px; height: 150px; padding: 0.5em; }
+  </style>
+  <script>
+    $(document).ready(function () {
+      $("#drag1").draggable();
+      $("#drop1").droppable({
+        drop: function () {
+          $("#drag1").css("display", "none");
+          $("#drop1").css("background-color", "green");
+          $("#drop1").html("Правильно");
+
+        }
+      })
+    })
+
+    $(document).ready(function () {
+        $("#drag2").draggable();
+        $("#drop2").droppable({
+          drop: function () {
+            $("#drag2").css("display", "none");
+            $("#drop2").css("background-color", "green");
+            $("#drop2").html("Правильно");
+
+          }
+        })
+      })
+      
+      $(document).ready(function () {
+          $("#drag3").draggable();
+          $("#drop3").droppable({
+            drop: function () {
+              $("#drag3").css("display", "none");
+              $("#drop3").css("background-color", "green");
+              $("#drop3").html("Правильно");
+
+            }
+          })
+        })
+    $(function () {
+        $("#accordion").accordion();
+        $("#tabs").tabs({ event: "mouseover" });
+        $("#drag1").draggable({ revert: true });
+        $("#drag2").draggable({ revert: true });
+        $("#drag3").draggable({ revert: true });
         
-        Котировки ценных бумаг: NASDAQ: AKCPF.
-      </div>
-      <div id="d3" title="HP" class="ui-widget">
-        ewlett-Packard (HP, Хью́летт-Па́ккард) — созданная в 1939 году компания — поставщик аппаратного и программного обеспечения для организаций и индивидуальных потребителей. Штаб-квартира — в Пало-Альто (Калифорния). Одна из крупнейших американских компаний в сфере информационных технологий.
-      </div>
-    <div class="w"> 
-      <img height="280" width="300" id="btn1" src="https://assets.turbologo.ru/blog/ru/2019/11/18163352/samsung-logo-1993.jpg" alt="">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/OTz6n_caNKI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      });
+  </script>
+</head>
+
+<body>
+
+  <div id="d1" title="Samsung" class="ui-widget">
+    Samsung Group («Самсунг Груп», кор. 삼성그룹, Samseong Gurub, Samsŏng Gurup) — южнокорейская группа компаний, один из
+    крупнейших чеболей, основанный в 1938 году. На мировом рынке известен как производитель высокотехнологичных
+    компонентов, включая полноцикловое производство интегральных микросхем, телекоммуникационного оборудования, бытовой
+    техники, аудио- и видеоустройств. Главный офис компании расположен в Сеуле.
+  </div>
+  <div id="d2" title="Asus class=" ui-widget">
+    AsusTek Computer Inc. (кит. 華碩電腦股份有限公司 Huáshuò Diànnǎo Gǔfèn Yǒuxiàn Gōngsī; кратко — ASUS — расположенная на Тайване транснациональная компания, специализирующаяся на
+    компьютерной электронике (как комплектующие, так и готовые продукты).
+
+    Название торговой марки Asus происходит от слова Pegasus («Пегас»).
+
+    Котировки ценных бумаг: NASDAQ: AKCPF. Компанию основали в 1989 году.
+  </div>
+  <div id="d3" title="HP" class="ui-widget">
+    ewlett-Packard (HP, Хью́летт-Па́ккард) — созданная в 1939 году компания — поставщик аппаратного и программного
+    обеспечения для организаций и индивидуальных потребителей. Штаб-квартира — в Пало-Альто (Калифорния). Одна из
+    крупнейших американских компаний в сфере информационных технологий.
+  </div>
+  <div class="w">
+    <img width="300" id="btn1" src="https://assets.turbologo.ru/blog/ru/2019/11/18163352/samsung-logo-1993.jpg" alt="">
+    <iframe width="1200" height="315" src="https://www.youtube.com/embed/owymCkBnqPY" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+  <br>
+  <div id="slider"></div>
+  <b style="color: rgb(230, 130, 17)">Оценка: <span id="result" style="color: rgb(230, 130, 17)"></span></b>
+  <br>
+  <div class="e">
+    <img width="300" id="btn2" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/asus_logo_icon_168565.png" alt="">
+    <iframe width="1200" height="315" src="https://www.youtube.com/embed/lvL95bGw4pw" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+  <br>
+  <div id="slider1"></div>
+  <b style="color: rgb(230, 130, 17)">Оценка: <span id="result1" style="color: rgb(230, 130, 17)"></span></b>
+  <br>
+  <div class="q">
+    <img width="300" id="btn3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/HP_New_Logo_2D.svg/1200px-HP_New_Logo_2D.svg.png" alt="">
+    <br>
+    <iframe width="1200" height="315" src="https://www.youtube.com/embed/ihtgq1QmO-4" title="YouTube video player"
+      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+  <br>
+  <div id="slider2"></div>
+  <b style="color: rgb(230, 130, 17)">Оценка: <span id="result2" style="color: rgb(230, 130, 17)"></span></b>
+  <br>
+  <br>
+  <br>
+  <h3>Установите соответствие</h3>
+  <div class="sam">
+  <div id="drag2" class="ui-widget-content">
+    <p> Asus</p>
+  </div>
+  <div id="drop1" class="ui-widget-content">
+    <p>1938</p>
+  </div>
+  </div>
+  <div class="as">
+    <div id="drag3" class="ui-widget-content">
+      <p>HP</p>
     </div>
-      <div id="slider"></div>
-      <b style="color: rgb(230, 130, 17)">Оценка: <span id="result" style="color: rgb(230, 130, 17)"></span></b>
-      <br>
-    <div class="e">
-      <img width="300" id="btn2" src="images.png" alt="">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/lvL95bGw4pw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div id="drop2" class="ui-widget-content">
+      <p>1989</p>
     </div>
-      <div id="slider1"></div>
-      <b style="color: rgb(230, 130, 17)">Оценка: <span id="result1" style="color: rgb(230, 130, 17)"></span></b>
-      <br>
-    <div class="q">
-      <img width="300" id="btn3" src="1200px-HP_New_Logo_2D.png" alt="">
-      <br>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/ihtgq1QmO-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="hp" class="ui-widget-content">
+    <div id="drag1" class="ui-widget-content">
+      <p>Samsung</p>
     </div>
-      <div id="slider2"></div>
-      <b style="color: rgb(230, 130, 17)">Оценка: <span id="result2" style="color: rgb(230, 130, 17)"></span></b>
-      <br>
-     
- </body>
- </html>  
+    <div id="drop3" class="ui-widget-content">
+      <p>1939</p>
+    </div>
+  </div>
+</body>
+</html>
