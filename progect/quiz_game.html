@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Викторина</title>
+    <link href="CSS/style1.css" rel="stylesheet">
+    <script src="JS/main1.js"></script>
+
+</head>
+
+
+<body>
+    <h1>This is best quiz on the internet!</h1>
+
+
+    <form id="quiz" name="quiz">
+
+
+        <p class="questions">Когда была выпущенна официальная версия игры Minecraft?</p>
+        <input type="radio" id="mc" name="question1" value="В 2011 году"> В 2011 году<br>
+        <input type="radio" id="mc" name="question1" value="В 2009 году"> В 2009 году<br>
+        <input type="radio" id="mc" name="question1" value="В 2007"> В 2007 году<br>
+
+        <p class="questions">Кто создатель игры Minecraft?</p>
+        <input type="radio" id="mc" name="question2" value="Билл Гейтс"> Билл Гейтс<br>
+        <input type="radio" id="mc" name="question2" value="Маркус Персон"> Маркус Персон<br>
+        <input type="radio" id="mc" name="question2" value="Нотч"> Нотч<br>
+
+        <p class="questions">Когда состоялся дебют серии God of War?</p>
+
+        <input type="radio" id="mc" name="question3" value="В марте 2005"> В марте 2005<br>
+        <input type="radio" id="mc" name="question3" value="В июне 2004"> В июне 2004<br>
+        <input type="radio" id="mc" name="question3" value="В декабре 2006"> В декабре 2006<br>
+
+        <p class="questions">На какое устрройство впервые выша игра God of War?</p>
+        <input type="radio" id="mc" name="question4" value="PlayStation 2">PlayStation 2 <br>
+        <input type="radio" id="mc" name="question4" value="PlayStation 3">PlayStation 3<br>
+        <input type="radio" id="mc" name="question4" value="XBox 360"> XBox 360<br>
+
+        <p class="questions">Чему посвящёна серия игр Call of Duty?</p>
+
+        <input type="radio" id="mc" name="question5" value="Строительству"> Строительству<br>
+        <input type="radio" id="mc" name="question5" value="Первой мировой войне"> Первой мировой войне<br>
+        <input type="radio" id="mc" name="question5" value=" Второй мировой войне"> Второй мировой войне<br>
+
+        <p class="questions">В каком году выйшла игра Call of Duty 4: Modern Warfare?</p>
+
+        <input type="radio" id="mc" name="question6" value="В 2007"> В 2007<br>
+        <input type="radio" id="mc" name="question6" value="В 2006"> В 2006<br>
+        <input type="radio" id="mc" name="question6" value=" В 2005"> В 2005<br>
+
+
+
+        <input id="button" type="button" value="I'm finished!" onclick="check();">
+
+        <button><a href="index.html">На главную</a></button>
+    </form>
+    <div id="after_submit">
+        <p id="number_correct"></p>
+        <p id="message"></p>
+
+    </div>
+
+</body>
+
+</html>
