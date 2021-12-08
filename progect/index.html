@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/Pepper-Grinder/jquery-ui.css">
+    <link rel="stylesheet" href="https://jqueryui.com/tabs/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $("#tabs").tabs();
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style>
+        #wid {
+            width: 65%;
+        }
+        
+        .wer {
+            text-align: -webkit-center;
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        body {
+            background-color: rgb(222, 194, 224);
+        }
+        
+        #navbar {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            border: 2px solid #0066FF;
+            border-radius: 20px 5px;
+            text-align: center;
+            background-color: #33ADFF;
+        }
+        
+        #navbar li {
+            display: inline;
+        }
+        
+        #navbar a {
+            color: #fff;
+            padding: 5px 10px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+        
+        #navbar a:hover {
+            border-radius: 20px 5px;
+            background-color: #0066FF;
+        }
+        
+        #tabs1 {
+            display: -webkit-flex;
+            display: flex;
+        }
+        
+        .col-sm-6 {
+            width: 33%;
+        }
+        
+        #button {
+            background: green;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            color: white;
+            font-size: 16px;
+            transition-duration: .5s;
+            margin-top: 15px;
+            width: 100%;
+        }
+        
+        #button:hover {
+            background: white;
+            border: 1px solid green;
+            color: black;
+            cursor: pointer;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="navbar">
+        <li><a href="quiz_game.html">Игры</a></li>
+        <li><a href="quiz_sum.html">IT компании</a></li>
+        <li><a href="quiz_dev.html">Производители девайсов</a></li>
+    </ul>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" width="10">
+        <div class="carousel-inner" width="10">
+            <div class="carousel-item active wer" width="10">
+                <img src="IMG/6013428558.jpg" class="d-block " alt="..." width="700">
+            </div>
+            <div class="carousel-item wer" width="100">
+                <img src="IMG/original.jpg" class="d-block" alt="..." width="700">
+            </div>
+            <div class="carousel-item wer" width="100">
+                <img id="wid" src="IMG/Без названия.jpg" class="d-block " alt="..." width="500">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">Игры</a></li>
+            <li><a href="#tabs-2">IT компании</a></li>
+            <li><a href="#tabs-3">Производители девайсов</a></li>
+        </ul>
+        <div id="tabs-1">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card" style="width: 18rem;">
+                        <img src="IMG/12a0ed7c6bc09b73d6558c6f69ed7f5f.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Minecraft</h5>
+                            <p class="card-text">Minecraft — компьютерная инди-игра в жанре песочницы, созданная шведским программистом Маркусом Перссоном и выпущенная его компанией Mojang AB. Перссон опубликовал начальную версию игры в 2009 году; в конце 2011 года была выпущена
+                                стабильная версия для ПК Microsoft Windows, распространявшаяся через официальный сайт. В последующие годы Minecraft была портирована на Linux и macOS для персональных компьютеров;
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="card" style="width: 18rem;">
+                        <img src="IMG/EGS_GodofWar_SantaMonicaStudio_S2_1200x1600-fbdf3cbc2980749091d52751ffabb7b7.jpg" class="card-img-top" alt="..." height="70%">
+                        <div class="card-body">
+                            <h5 class="card-title">God of War</h5>
+                            <p class="card-text">God of War — серия компьютерных игр в экшн-жанрах hack and slash и action-adventure. Основана на древнегреческой и скандинавской мифологии. Главным героем всех игр серии является спартанский воин Кратос, бросивший вызов богам.Дебют
+                                серии God of War состоялся в марте 2005 года, когда для консоли PlayStation 2 вышла первая игра серии — God of War, разработанная SCE Santa Monica. Игра оказалась по версии IGN на первой строчке самых лучших игр на PS2
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6">
+                    <div class="card" style="width: 18rem;">
+                        <img src="IMG/FiekbfhIalRbPcJBkU83XfjWhHyvjNhk.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Call of Duty</h5>
+                            <p class="card-text">Call of Duty — серия компьютерных игр в жанре шутер от первого лица, посвящённых Второй мировой войне, холодной войне, борьбе с терроризмом, гипотетической Третьей мировой войне, войнам будущего и космическим войнам. Серия
+                                состоит из семнадцати основных игр и десяти ответвлений. В 2003 вышла Call of Duty, в 2005 вышла Call of Duty 2, в 2006 вышла Call of Duty 3, в2007 вышла Call of Duty 4: Modern Warfare, в 2008 вышла Call of Duty: World
+                                at War.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button id="button"> <a href="quiz_game.html">Перейти</a></button>
+        </div>
+
+        <div id="tabs-2">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card" style="width: 18rem;">
+                        <img src="IMG/Samsung_Logo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samsung</h5>
+                            <p class="card-text">Samsung Group («Самсунг Груп», с корейского означает "Три звезды") — южнокорейская группа компаний, один из крупнейших чеболей, основанный в 1938 году. На мировом рынке известен как производитель высокотехнологичных компонентов,
+                                включая полноцикловое производство интегральных микросхем, телекоммуникационного оборудования, бытовой техники, аудио- и видеоустройств. Главный офис компании расположен в Сеуле. Начали торговать електроникой в 1969 году,
+                                это были чёрно-белые телевизоры
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="card" style="width: 18rem;">
+                        <img src="IMG/Apple_logo_black.png" class="card-img-top" alt="..." height="70%">
+                        <div class="card-body">
+                            <h5 class="card-title">Apple</h5>
+                            <p class="card-text">Apple — американская корпорация, производитель персональных и планшетных компьютеров, аудиоплееров, смартфонов, программного обеспечения. Один из пионеров в области персональных компьютеров и современных многозадачных операционных
+                                систем с графическим интерфейсом. Штаб-квартира — в Купертино, штат Калифорния. Благодаря инновационным технологиям и эстетичному дизайну, корпорация Apple создала в индустрии потребительской электроники уникальную репутацию,
+                                сравнимую с культом. Их первый компьютер «Apple I» вышел в 1976 году
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6">
+                    <div class="card" style="width: 18rem;">
+                        <img src="IMG/Microsoft_logo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Microsoft</h5>
+                            <p class="card-text">Ма́йкрософт — одна из крупнейших транснациональных компаний по производству проприетарного программного обеспечения для различного рода вычислительной техники — персональных компьютеров, игровых приставок, КПК, мобильных телефонов
+                                и прочего. Разработчик наиболее широко распространённой на данный момент в мире программной платформы — семейства операционных систем Windows. Hазвание для компании Microsoft придумал Пол Аллен.В 2008 году компания Microsoft
+                                попыталась купить компанию "Yahoo!" за 48 млрд долларов, но сделка не состоялась.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button id="button"> <a href="quiz_sum.html">Перейти</a></button>
+
+        </div>
+
+
+        <div id="tabs-3">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card" style="width: 18rem;">
+                        <img src="IMG/Razer-Logo.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Razer</h5>
+                            <p class="card-text">Razer — компания, занимающаяся разработкой и созданием профессионального игрового оборудования. В её ассортименте мыши, коврики для мыши, клавиатуры, наушники, игровые системы.значально Razer была учреждена как дочерняя фирма
+                                компании kärna LLC в 1998 году, ставившая своей целью развитие и поставку на рынок серии высококачественных компьютерных мышей Boomslang, предназначенную для геймеров. После того, как kärna прекратила своё существование
+                                в 2000 году, Мин-Лян Тан (Min-Liang Tan) и бывший генеральный менеджнер kärna, Роберт Кракофф (Robert Krakoff), приобретают права на бренд Razer и в 2005 году основывают Razer Inc. в Сан-Диего, Калифорния. В 2006 году компания
+                                выпускает знаковую для себя серию мышек DeathAdder, которая впоследствии станет одной из наиболее продаваемых в мире.В 2010 году компания открывает новый региональный центр в Шанхае и увеличивает свои инвестиции в киберспорт,
+                                становясь спонсором корейской киберспортивной команды WeMade FOX
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="card" style="width: 18rem;">
+                        <img src="IMG/Без названия.png" class="card-img-top" alt="..." height="70%">
+                        <div class="card-body">
+                            <h5 class="card-title">HyperX</h5>
+                            <p class="card-text">HyperX — подразделение (и одноимённый бренд) американской компании HP Inc., специализирующейся на поставке аппаратного и программного обеспечения для организаций и индивидуальных потребителей. Компоненты HyperX неоднократно
+                                использовались при постановке мировых рекордов разгона компьютеров. HyperX также финансирует развитие киберспорта и профессиональные геймерские команды. Наушники HyperX являются официальной продукцией профессиональных игроков
+                                команд Alliance, CNB E-sports Club, SK-Gaming, Team Liquid, Renegades. В 2010 HyperX представило первое низковольтное высокопроизводительное запоминающее устройство LoVo. В 2015 году Kingston Technology объявила о полной
+                                автономности бренда HyperX
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6">
+                    <div class="card" style="width: 18rem;">
+                        <img src="IMG/Logitech.png " class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Logitech</h5>
+                            <p class="card-text">Logitech International S.A. (краткое название Logitech или Logi, читается «лоджитэ́к»; в Японии используется название Logicool) — швейцарская компания, производитель компьютерной периферии, устройств для геймеров и др. Штаб-квартира
+                                расположена в Лозанне (Швейцария). Название компании Logitech образовано от французского слова «logiciel», что в переводе означает «программное обеспечение».Logitech International S.A. (краткое название Logitech или Logi,
+                                читается «лоджитэ́к»; в Японии используется название Logicool) — швейцарская компания, производитель компьютерной периферии, устройств для геймеров и др. Штаб-квартира расположена в Лозанне (Швейцария). Название компании
+                                Logitech образовано от французского слова «logiciel», что в переводе означает «программное обеспечение».Компания Logitech была основана в Эпплсе, Швейцария, в 1981 году выпускниками Стэнфордского университета Даниэлем Борелем
+                                и Пьерлуиджи Заппакостой и бывшим инженером Olivetti Джакомо Марини. B 2001 году Logitech приобрели компанию Labtec за 150 миллионов долларов. Одними из популярных товаров от компании Logitech были наушники Logitech G435
+                                Lightspeed
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button id="button"> <a href="quiz_sum.html">Перейти</a></button>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
