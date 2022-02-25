@@ -7,6 +7,18 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    margin-left: 5em;
+}
+
+img {
+    margin-left: 5em;
+}
+
+a {
+    text-decoration: none;
+}
+
 p {
     margin-left: 3em;
     margin-right: 3em;
